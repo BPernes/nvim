@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -165,10 +160,21 @@ _G.packer_plugins = {
     path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["sonicpi.vim"] = {
+    loaded = true,
+    path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/sonicpi.vim",
+    url = "https://github.com/dermusikman/sonicpi.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tmux.nvim"] = {
+    config = { "\27LJ\2\2.\0\0\2\0\3\0\0056\0\0\0'\1\1\0B\0\2\0029\0\2\0D\0\1\0\nsetup\ttmux\frequire\0" },
+    loaded = true,
+    path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/tmux.nvim",
+    url = "https://github.com/aserowy/tmux.nvim"
   },
   undotree = {
     loaded = true,
@@ -179,10 +185,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-prettier"] = {
+    loaded = true,
+    path = "/home/adsensum/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: tmux.nvim
+time([[Config for tmux.nvim]], true)
+try_loadstring("\27LJ\2\2.\0\0\2\0\3\0\0056\0\0\0'\1\1\0B\0\2\0029\0\2\0D\0\1\0\nsetup\ttmux\frequire\0", "config", "tmux.nvim")
+time([[Config for tmux.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")

@@ -22,10 +22,10 @@ return require('packer').startup(function(use)
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('prettier/vim-prettier', {run = 'yarn install --frozen-lockfile --production'})
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -48,5 +48,13 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  -- Sonic pi
+  use('dermusikman/sonicpi.vim')
+
+  --Tmux
+  use({
+    "aserowy/tmux.nvim",
+    config = function() return require("tmux").setup() end 
+  })
 
   end)
