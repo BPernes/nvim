@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('prettier/vim-prettier', {run = 'yarn install --frozen-lockfile --production'})
 
+  -- MarkdownViewer
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  -- if the command MarkdownPreview does'nt run in the first try, run this command:
+  -- :call mkdp#util#install()
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
